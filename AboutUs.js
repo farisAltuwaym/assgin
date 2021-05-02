@@ -2,7 +2,7 @@ import React from 'react'
 import { Button, StyleSheet, Text, View } from 'react-native'
 import { data } from './data'
 
-const AboutUs = ({ goBack }) => {
+const AboutUs = ({ navigation }) => {
 
     return (
         <View style={{flex:1}}>
@@ -16,10 +16,7 @@ const AboutUs = ({ goBack }) => {
             </View>
             <View>
 
-                <Button
-                    title="Go Back"
-                    onPress={goBack}
-                />
+            <Button title={'Go nback'} onPress={() => navigation.goBack()} />
             </View>
         </View>
     )

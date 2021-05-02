@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Linking, StyleSheet, Text, View } from 'react-native'
 
-const Linkedin = ({ goBack }) => {
+const Linkedin = ({ navigation }) => {
     return (
         <View style={{ flex: 1 }}>
             <View style={{ flex: 1 }}>
@@ -11,12 +11,9 @@ const Linkedin = ({ goBack }) => {
 
                     http://linkedin.com/in/faris-al-tuwaym-7a8a2a192
             </Text>
-            <Button onPress={()=>Linking.openURL('http://linkedin.com/in/faris-al-tuwaym-7a8a2a192')} title="LinkedIn"/>
+           
             </View>
-            <Button
-                title={'goback'}
-                onPress={goBack}
-            />
+            <Button title={'Go nback'} onPress={() => navigation.goBack()} />
         </View>
     )
 }
